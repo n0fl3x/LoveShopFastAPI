@@ -1,12 +1,12 @@
 from enum import Enum, unique
 
 
-class RandomSomething(str, Enum):
+class EnumRandomSomething(str, Enum):
     random = "random"
 
 
 @unique
-class Categories(int, Enum):
+class EnumCategories(int, Enum):
     lubes = 1
     dildos = 2
     vibrators = 3
@@ -14,7 +14,7 @@ class Categories(int, Enum):
     
 
 @unique
-class Items(int, Enum):
+class EnumItems(int, Enum):
     water_based_lube = 1
     bodysuit = 2
     butt_plug = 3
