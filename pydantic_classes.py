@@ -1,17 +1,17 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class PydCategories(BaseModel):
-    name: str
-    description: str | None = None
+    cat_name: str = Field(min_length=3, max_length=32)
+    cat_description: str | None = None
 
 
 class PydTags(BaseModel):
-    name: str
+    tag_name: str = Field(min_length=2, max_length=16)
 
 
 class PydItems(BaseModel):
-    name: str
-    price: float | int = 0.0
-    description: str | None = None
-    tags: list[PydTags] | None = None
+    item_name: str = Field(min_length=2, max_length=128)
+    item_price: float | int = Field(ge=0.0)
+    item_description: str | None = None
+    item_tags: list[PydTags] = None

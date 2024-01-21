@@ -11,6 +11,14 @@ class EnumCategories(int, Enum):
     dildos = 2
     vibrators = 3
     giants = 4
+
+
+@unique
+class EnumTags(str, Enum):
+    clothes = "clothes"
+    toys = "toys"
+    anal = "anal"
+    vaginal = "vaginal"
     
 
 @unique
